@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shajeer Ummar — Network Engineer, Dubai UAE</title>
+<meta name="description" content="Portfolio of Shajeer Vattaparambil Ummar, a Network Engineer in Dubai specializing in HPE Aruba, Fortinet, Cisco and multi-vendor enterprise network deployments.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="nav-wrap">
+    <a href="#hero" class="logo" aria-label="Shajeer Ummar, back to top">
+      <span class="logo-mark">SU</span>
+      <span class="logo-status"><span class="led"></span>ONLINE</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#certifications" class="nav-link">Certifications</a>
+      <a href="#projects" class="nav-link">Deployments</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <a href="#contact" class="btn btn-primary nav-cta">Let's Connect</a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-grid">
+      <div class="hero-content reveal">
+        <p class="eyebrow"><span class="led"></span>NETWORK ENGINEER — DUBAI, UAE</p>
+        <h1 class="hero-title">Shajeer<br>Ummar</h1>
+        <p class="hero-sub">I design, deploy and keep enterprise networks running — HPE&nbsp;Aruba switching &amp; wireless, multi-vendor firewalls, and full-lifecycle rollouts across hotels, schools and enterprise sites in the UAE.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Deployments</a>
+          <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+        </div>
+        <dl class="hero-stats">
+          <div class="stat">
+            <dt>Experience</dt>
+            <dd>2+ yrs <span>UAE</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Deployments</dt>
+            <dd>6+ <span>sites</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Certifications</dt>
+            <dd>11 <span>active</span></dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="hero-visual reveal" aria-hidden="true">
+        <svg viewBox="0 0 520 520" class="net-diagram" role="img" aria-label="Diagram of a network from WAN through firewall, core switch, access switch and wireless controller to end devices">
+          <!-- connectors -->
+          <path id="l1" class="cable" d="M260,84 L260,120"/>
+          <path id="l2" class="cable" d="M260,168 L260,210"/>
+          <path id="l3" class="cable" d="M260,258 L120,310"/>
+          <path id="l4" class="cable" d="M260,258 L400,310"/>
+          <path id="l5" class="cable" d="M120,358 L120,400"/>
+          <path id="l6" class="cable" d="M400,358 L400,400"/>
+          <path id="l7" class="wifi-cable" d="M400,424 L340,470"/>
+          <path id="l8" class="wifi-cable" d="M400,424 L400,478"/>
+          <path id="l9" class="wifi-cable" d="M400,424 L460,470"/>
+
+          <!-- packets -->
+          <circle class="packet" r="4"><animateMotion dur="2.4s" repeatCount="indefinite" begin="0s"><mpath href="#l1"/></animateMotion></circle>
+          <circle class="packet" r="4"><animateMotion dur="2.2s" repeatCount="indefinite" begin="0.4s"><mpath href="#l2"/></animateMotion></circle>
+          <circle class="packet" r="4"><animateMotion dur="2.6s" repeatCount="indefinite" begin="0.8s"><mpath href="#l3"/></animateMotion></circle>
+          <circle class="packet" r="4"><animateMotion dur="2.6s" repeatCount="indefinite" begin="1.1s"><mpath href="#l4"/></animateMotion></circle>
+          <circle class="packet" r="4"><animateMotion dur="1.8s" repeatCount="indefinite" begin="1.4s"><mpath href="#l5"/></animateMotion></circle>
+          <circle class="packet" r="4"><animateMotion dur="1.8s" repeatCount="indefinite" begin="1.6s"><mpath href="#l6"/></animateMotion></circle>
+
+          <!-- nodes -->
+          <g class="node">
+            <circle cx="260" cy="50" r="34"/>
+            <text x="260" y="55" text-anchor="middle">WAN</text>
+          </g>
+          <g class="node">
+            <rect x="210" y="120" width="100" height="48" rx="8"/>
+            <text x="260" y="149" text-anchor="middle">FIREWALL</text>
+          </g>
+          <g class="node node-accent">
+            <rect x="210" y="210" width="100" height="48" rx="8"/>
+            <text x="260" y="239" text-anchor="middle">CORE SW</text>
+          </g>
+          <g class="node">
+            <rect x="70" y="310" width="100" height="48" rx="8"/>
+            <text x="120" y="339" text-anchor="middle">ACCESS SW</text>
+          </g>
+          <g class="node">
+            <rect x="350" y="310" width="100" height="48" rx="8"/>
+            <text x="400" y="339" text-anchor="middle">WLC</text>
+          </g>
+          <g class="node node-end">
+            <rect x="70" y="400" width="100" height="40" rx="8"/>
+            <text x="120" y="425" text-anchor="middle">ENDPOINTS</text>
+          </g>
+          <g class="node node-end">
+            <rect x="350" y="400" width="100" height="24" rx="6"/>
+            <text x="400" y="417" text-anchor="middle">AP</text>
+          </g>
+
+          <g class="device">
+            <circle cx="340" cy="478" r="12"/>
+            <circle cx="400" cy="486" r="12"/>
+            <circle cx="460" cy="478" r="12"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll to content"><span></span></a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-head reveal">
+      <p class="eyebrow">01 // ABOUT</p>
+      <h2>Profile</h2>
+    </div>
+    <div class="about-grid">
+      <p class="about-text reveal">Results-driven Network Engineer with 2+ years of in-depth UAE experience designing, implementing and optimizing complex enterprise network solutions. Expert in HPE Aruba switching and wireless technologies, with a strong background across multi-vendor environments including Cisco, Fortinet, Ruckus, Sophos, SonicWall and AirPro. Proven track record of handling complete project deployments end to end, hardening perimeter security and keeping network operations compliant and reliable.</p>
+      <div class="quick-facts reveal">
+        <div class="fact"><span class="fact-label">Based in</span><span class="fact-value">Dubai, UAE</span></div>
+        <div class="fact"><span class="fact-label">Role</span><span class="fact-value">Network Engineer</span></div>
+        <div class="fact"><span class="fact-label">Focus</span><span class="fact-value">Aruba &amp; multi-vendor</span></div>
+        <div class="fact"><span class="fact-label">Status</span><span class="fact-value"><span class="led"></span>Open to opportunities</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section section-alt" id="experience">
+    <div class="section-head reveal">
+      <p class="eyebrow">02 // EXPERIENCE</p>
+      <h2>Route To Here</h2>
+      <p class="section-sub">A career traced hop by hop, from first internship to current role.</p>
+    </div>
+
+    <div class="trace-output reveal">
+      <div class="trace-bar"><span></span><span></span><span></span><p>traceroute&nbsp;shajeer.career</p></div>
+      <ol class="trace-list">
+        <li class="trace-hop">
+          <span class="hop-index">01</span>
+          <div class="hop-body">
+            <div class="hop-head">
+              <h3>Infox Technologies</h3>
+              <span class="hop-role">Python Full-Stack Web Development Intern</span>
+              <span class="hop-date">Jun 2021 – May 2022</span>
+            </div>
+            <ul>
+              <li>Built interfaces with React and Bootstrap, and responsive apps with HTML, CSS and JavaScript.</li>
+              <li>Worked across the full SDLC with cross-functional teams, from requirements to deployment.</li>
+              <li>Debugged and tested applications to ensure quality before release.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="trace-hop">
+          <span class="hop-index">02</span>
+          <div class="hop-body">
+            <div class="hop-head">
+              <h3>Reliance Jio Mart</h3>
+              <span class="hop-role">IT Support Assistant</span>
+              <span class="hop-date">Aug 2022 – Mar 2024</span>
+            </div>
+            <ul>
+              <li>Diagnosed and resolved hardware, software and network issues, minimizing end-user downtime.</li>
+              <li>Monitored system performance and traffic, proactively catching connectivity issues.</li>
+              <li>Implemented backup strategies to protect critical company data.</li>
+              <li>Managed IT equipment inventory, streamlining tracking and procurement.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="trace-hop trace-hop-current">
+          <span class="hop-index">03</span>
+          <div class="hop-body">
+            <div class="hop-head">
+              <h3>IOT WORLD</h3>
+              <span class="hop-role">Network Engineer</span>
+              <span class="hop-date">Jul 2024 – Present</span>
+            </div>
+            <ul>
+              <li>Led complete network project deployments end to end, from design to implementation.</li>
+              <li>Configured multi-vendor systems (HPE Aruba, Fortinet, Cisco, AirPro) for efficient cloud-service data flow.</li>
+              <li>Deployed and managed Fortinet, Sophos and SonicWall firewalls, building security policies that harden perimeter defenses.</li>
+              <li>Optimized network design to cut operational costs and improve service delivery.</li>
+              <li>Performed proactive maintenance and advanced troubleshooting, reducing outages and extending hardware lifecycles.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+      <p class="trace-footer">* destination reached — 3 hops, 0% packet loss</p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="section-head reveal">
+      <p class="eyebrow">03 // TOOLKIT</p>
+      <h2>Skills &amp; Stack</h2>
+      <p class="section-sub">Every port is live.</p>
+    </div>
+
+    <div class="patch-panel reveal">
+      <div class="panel-label">PATCH PANEL — 8 PORT</div>
+      <div class="ports">
+        <div class="port"><span class="port-num">01</span><span class="led"></span><span class="port-name">Network Configuration</span></div>
+        <div class="port"><span class="port-num">02</span><span class="led"></span><span class="port-name">LAN Switching</span></div>
+        <div class="port"><span class="port-num">03</span><span class="led"></span><span class="port-name">Enterprise Wi‑Fi</span></div>
+        <div class="port"><span class="port-num">04</span><span class="led"></span><span class="port-name">Network Security</span></div>
+        <div class="port"><span class="port-num">05</span><span class="led"></span><span class="port-name">Troubleshooting</span></div>
+        <div class="port"><span class="port-num">06</span><span class="led"></span><span class="port-name">Remote Support</span></div>
+        <div class="port"><span class="port-num">07</span><span class="led"></span><span class="port-name">Firewall Configuration</span></div>
+        <div class="port"><span class="port-num">08</span><span class="led"></span><span class="port-name">Technical Support</span></div>
+      </div>
+    </div>
+
+    <div class="vendor-rack reveal">
+      <span class="vendor-label">VENDOR STACK</span>
+      <div class="chips">
+        <span class="chip">HPE Aruba</span>
+        <span class="chip">Fortinet</span>
+        <span class="chip">Cisco</span>
+        <span class="chip">Sophos</span>
+        <span class="chip">SonicWall</span>
+        <span class="chip">Ruckus</span>
+        <span class="chip">AirPro</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section section-alt" id="certifications">
+    <div class="section-head reveal">
+      <p class="eyebrow">04 // CERTIFICATIONS</p>
+      <h2>Credentials</h2>
+      <p class="section-sub">11 active vendor certifications across five programs.</p>
+    </div>
+
+    <div class="cert-groups">
+      <div class="cert-group reveal">
+        <h3>HPE Aruba Networking</h3>
+        <div class="cert-cards">
+          <div class="cert-card"><span class="cert-name">Aruba Accredited SD‑WAN Expert</span><span class="cert-date">Nov 2024 – Nov 2026</span></div>
+          <div class="cert-card"><span class="cert-name">Aruba Product Specialist — Central</span><span class="cert-date">Nov 2024 – Nov 2026</span></div>
+          <div class="cert-card"><span class="cert-name">Aruba Accredited SD‑WAN Professional</span><span class="cert-date">Oct 2024 – Oct 2026</span></div>
+          <div class="cert-card"><span class="cert-name">Aruba Product Specialist — CX 10000 Switch</span><span class="cert-date">Oct 2024 – Oct 2026</span></div>
+          <div class="cert-card"><span class="cert-name">Aruba Product Specialist — Security Service Edge</span><span class="cert-date">Oct 2024 – Oct 2026</span></div>
+        </div>
+      </div>
+
+      <div class="cert-group reveal">
+        <h3>Sophos</h3>
+        <div class="cert-cards">
+          <div class="cert-card"><span class="cert-name">Central Endpoint &amp; Server Protection Certified Engineer v4.0</span><span class="cert-date">Aug 2025 – Aug 2027</span></div>
+          <div class="cert-card"><span class="cert-name">Firewall Certified Engineer v21.5 (ET80)</span><span class="cert-date">Aug 2025 – Aug 2027</span></div>
+          <div class="cert-card"><span class="cert-name">Firewall v21.5 Certified Technician</span><span class="cert-date">Aug 2025 – Aug 2027</span></div>
+        </div>
+      </div>
+
+      <div class="cert-group reveal">
+        <h3>Fortinet</h3>
+        <div class="cert-cards">
+          <div class="cert-card"><span class="cert-name">Fortinet Certified Associate — Cybersecurity</span><span class="cert-date">Jan 2025 – Jan 2027</span></div>
+          <div class="cert-card"><span class="cert-name">Fortinet Certified Fundamentals — Cybersecurity</span><span class="cert-date">Jan 2025 – Jan 2027</span></div>
+        </div>
+      </div>
+
+      <div class="cert-group reveal">
+        <h3>Cisco</h3>
+        <div class="cert-cards">
+          <div class="cert-card"><span class="cert-name">Ethical Hacker</span><span class="cert-date">Feb 2025</span></div>
+          <div class="cert-card"><span class="cert-name">Introduction to Cybersecurity</span><span class="cert-date">Feb 2025</span></div>
+          <div class="cert-card"><span class="cert-name">Introduction to IoT</span><span class="cert-date">Feb 2025</span></div>
+        </div>
+      </div>
+
+      <div class="cert-group reveal">
+        <h3>Udemy / Microsoft</h3>
+        <div class="cert-cards">
+          <div class="cert-card"><span class="cert-name">Microsoft Certified Desktop Support Technician (MCDST)</span><span class="cert-date">Jun 2024</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="section-head reveal">
+      <p class="eyebrow">05 // DEPLOYMENTS</p>
+      <h2>Project Log</h2>
+      <p class="section-sub">Six client deployments, closed out end to end.</p>
+    </div>
+
+    <div class="ticket-grid">
+      <article class="ticket reveal">
+        <div class="ticket-top"><span class="ticket-id">TCK‑001</span><span class="ticket-status">DEPLOYED</span></div>
+        <h3>VRRP Configuration &amp; Installation</h3>
+        <p class="ticket-client">Royal Continental Hotel, Dubai · 3 days</p>
+        <p>Assisted in configuring and installing VRRP for high availability and seamless failover across the hotel's network infrastructure.</p>
+        <div class="ticket-stack"><span>Aruba Controller</span><span>VRRP</span></div>
+      </article>
+
+      <article class="ticket reveal">
+        <div class="ticket-top"><span class="ticket-id">TCK‑002</span><span class="ticket-status">DEPLOYED</span></div>
+        <h3>Wireless Solution Deployment</h3>
+        <p class="ticket-client">Seven Seas Hotel, Al Nahda · 2 weeks</p>
+        <p>Designed and deployed a complete wireless solution for seamless coverage across the hotel premises.</p>
+        <div class="ticket-stack"><span>AirPro APs</span><span>Wireless Controllers</span></div>
+      </article>
+
+      <article class="ticket reveal">
+        <div class="ticket-top"><span class="ticket-id">TCK‑003</span><span class="ticket-status">DEPLOYED</span></div>
+        <h3>Switch Replacement &amp; Network Upgrade</h3>
+        <p class="ticket-client">Danway, Dubai Investment Park · 2 weeks</p>
+        <p>Replaced Cisco switches with Fortinet switches and FortiAPs to upgrade performance and scalability.</p>
+        <div class="ticket-stack"><span>Fortinet Switches</span><span>FortiAPs</span></div>
+      </article>
+
+      <article class="ticket reveal">
+        <div class="ticket-top"><span class="ticket-id">TCK‑004</span><span class="ticket-status">DEPLOYED</span></div>
+        <h3>Wireless Infrastructure Upgrade</h3>
+        <p class="ticket-client">Kempinski Central Avenue, Boulevard · 2 weeks</p>
+        <p>Replaced Cisco access points with Aruba APs on a centralized controller — seamless migration and improved guest connectivity.</p>
+        <div class="ticket-stack"><span>Aruba Controller</span><span>Aruba APs</span></div>
+      </article>
+
+      <article class="ticket reveal">
+        <div class="ticket-top"><span class="ticket-id">TCK‑005</span><span class="ticket-status">DEPLOYED</span></div>
+        <h3>Network Infrastructure Replacement</h3>
+        <p class="ticket-client">Movenpick Hotel, JLT · 2 weeks</p>
+        <p>Replaced core and IDF switches for improved reliability and scalability, with minimal downtime during migration.</p>
+        <div class="ticket-stack"><span>Aruba Core Switches</span><span>Aruba Access Switches</span></div>
+      </article>
+
+      <article class="ticket reveal">
+        <div class="ticket-top"><span class="ticket-id">TCK‑006</span><span class="ticket-status">DEPLOYED</span></div>
+        <h3>Complete Switching &amp; Wireless Upgrade</h3>
+        <p class="ticket-client">Dubai Heights Academy, Dubai · 2 weeks</p>
+        <p>Deployed stacked Aruba switches and APs on a centralized controller to support academic and admin operations.</p>
+        <div class="ticket-stack"><span>Aruba Stacked Switches</span><span>Aruba Controller</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section section-alt" id="education">
+    <div class="section-head reveal">
+      <p class="eyebrow">06 // EDUCATION</p>
+      <h2>Education</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <span class="edu-date">2023</span>
+        <h3>Python Full Stack Web Development</h3>
+        <p>Luminar Technolab · June 2023</p>
+      </div>
+      <div class="edu-card reveal">
+        <span class="edu-date">2021</span>
+        <h3>Bachelor of Computer Application</h3>
+        <p>University of Calicut · March 2021</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="section-head reveal">
+      <p class="eyebrow">07 // CONTACT</p>
+      <h2>Let's Build Something Reliable</h2>
+      <p class="section-sub">Open to network engineering roles and enterprise deployment projects across the UAE.</p>
+    </div>
+
+    <div class="contact-grid">
+      <ul class="contact-info reveal">
+        <li><span class="c-label">EMAIL</span><a href="mailto:shajeervu111@gmail.com">shajeervu111@gmail.com</a></li>
+        <li><span class="c-label">PHONE</span><a href="tel:+971567848212">+971 56 784 8212</a></li>
+        <li><span class="c-label">LOCATION</span><span>Dubai, UAE</span></li>
+        <li><span class="c-label">LINKEDIN</span><a href="https://www.linkedin.com/in/shajeer-ummar-2499081ab/" target="_blank" rel="noopener">linkedin.com/in/shajeer-ummar</a></li>
+      </ul>
+
+      <form class="contact-form reveal" id="contactForm">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Shajeer Ummar — built with HTML, CSS &amp; JavaScript.</p>
+  <a href="#hero" class="back-top">Back to top ↑</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
