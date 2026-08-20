@@ -84,7 +84,7 @@ const EMAILJS_PUBLIC_KEY = '8XXOC2OLoi26TGurx';
 const EMAILJS_SERVICE_ID = 'service_aaodvjh';
 const EMAILJS_TEMPLATE_ID = 'template_ez4tdzm';
 
-if (window.emailjs && EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
+if (window.emailjs && EMAILJS_PUBLIC_KEY !== '8XXOC2OLoi26TGurx') {
   emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 }
 
@@ -112,7 +112,7 @@ contactForm.addEventListener('submit', async (event) => {
   }
 
   // EmailJS not configured yet — fall back to opening an email
-  if (!window.emailjs || EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
+  if (!window.emailjs || EMAILJS_PUBLIC_KEY === '8XXOC2OLoi26TGurx') {
     openMailtoFallback(name, email, message);
     contactForm.reset();
     return;
