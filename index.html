@@ -33,6 +33,36 @@
       <a href="#contact" class="nav-link">Contact</a>
     </nav>
 
+    <div class="nav-utils">
+      <div class="currency-wrap">
+        <button type="button" class="icon-btn" id="currencyToggle" aria-haspopup="true" aria-expanded="false" aria-controls="currencyPanel" aria-label="Currency converter" title="Currency converter">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="12" r="5.5"/><circle cx="16" cy="12" r="5.5"/></svg>
+        </button>
+
+        <div class="currency-panel" id="currencyPanel" hidden>
+          <div class="currency-panel-head">
+            <span>CURRENCY CONVERTER</span>
+            <button type="button" class="panel-close" id="currencyClose" aria-label="Close currency converter">&times;</button>
+          </div>
+          <div class="currency-row">
+            <input type="number" id="curAmount" class="currency-input" value="1" min="0" step="any" inputmode="decimal" aria-label="Amount">
+            <select id="curFrom" class="currency-select" aria-label="From currency"></select>
+          </div>
+          <button type="button" class="currency-swap" id="currencySwap" aria-label="Swap currencies">⇅</button>
+          <div class="currency-row">
+            <span class="currency-result" id="curResult" aria-live="polite">—</span>
+            <select id="curTo" class="currency-select" aria-label="To currency"></select>
+          </div>
+          <p class="currency-note" id="currencyNote">Live rates via open.er-api.com</p>
+        </div>
+      </div>
+
+      <button type="button" class="icon-btn" id="themeToggle" aria-label="Switch between light and dark theme" title="Toggle light / dark theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.5M12 19v2.5M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2.5 12H5M19 12h2.5M4.2 19.8L6 18M18 6l1.8-1.8"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+    </div>
+
     <a href="#contact" class="btn btn-primary nav-cta">Let's Connect</a>
 
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
@@ -218,33 +248,81 @@
     <div class="section-head reveal">
       <p class="eyebrow">03 // TOOLKIT</p>
       <h2>Skills &amp; Stack</h2>
-      <p class="section-sub">Every port is live.</p>
+      <p class="section-sub">Every port is live — click one to see what runs through it.</p>
     </div>
 
     <div class="patch-panel reveal">
-      <div class="panel-label">PATCH PANEL — 8 PORT</div>
-      <div class="ports">
-        <div class="port"><span class="port-num">01</span><span class="led"></span><span class="port-name">Network Configuration</span></div>
-        <div class="port"><span class="port-num">02</span><span class="led"></span><span class="port-name">LAN Switching</span></div>
-        <div class="port"><span class="port-num">03</span><span class="led"></span><span class="port-name">Enterprise Wi‑Fi</span></div>
-        <div class="port"><span class="port-num">04</span><span class="led"></span><span class="port-name">Network Security</span></div>
-        <div class="port"><span class="port-num">05</span><span class="led"></span><span class="port-name">Troubleshooting</span></div>
-        <div class="port"><span class="port-num">06</span><span class="led"></span><span class="port-name">Remote Support</span></div>
-        <div class="port"><span class="port-num">07</span><span class="led"></span><span class="port-name">Firewall Configuration</span></div>
-        <div class="port"><span class="port-num">08</span><span class="led"></span><span class="port-name">Technical Support</span></div>
+      <div class="panel-label">PATCH PANEL — 8 PORT <span class="panel-hint">click a port</span></div>
+      <div class="ports" id="portsGrid">
+        <button type="button" class="port" data-detail="Configuring multi-vendor systems (Aruba, Fortinet, Cisco, AirPro) for efficient data flow to cloud-based services.">
+          <span class="port-num">01</span><span class="led"></span><span class="port-name">Network Configuration</span>
+        </button>
+        <button type="button" class="port" data-detail="Core, access and stacked switch deployments — including full infrastructure replacements with minimal downtime.">
+          <span class="port-num">02</span><span class="led"></span><span class="port-name">LAN Switching</span>
+        </button>
+        <button type="button" class="port" data-detail="Controller-based wireless design and rollout across hotels, offices and academic campuses.">
+          <span class="port-num">03</span><span class="led"></span><span class="port-name">Enterprise Wi‑Fi</span>
+        </button>
+        <button type="button" class="port" data-detail="Deploying firewalls and building security policies that harden perimeter defenses.">
+          <span class="port-num">04</span><span class="led"></span><span class="port-name">Network Security</span>
+        </button>
+        <button type="button" class="port" data-detail="Packet-level analysis and advanced diagnostics across Aruba, Cisco, Airpro and Fortinet devices.">
+          <span class="port-num">05</span><span class="led"></span><span class="port-name">Troubleshooting</span>
+        </button>
+        <button type="button" class="port" data-detail="End-user connectivity support and guidance on proper use of networking equipment.">
+          <span class="port-num">06</span><span class="led"></span><span class="port-name">Remote Support</span>
+        </button>
+        <button type="button" class="port" data-detail="Fortinet, Sophos and SonicWall firewall setup and ongoing policy management.">
+          <span class="port-num">07</span><span class="led"></span><span class="port-name">Firewall Configuration</span>
+        </button>
+        <button type="button" class="port" data-detail="Diagnosing hardware, software and network issues to minimize end-user downtime.">
+          <span class="port-num">08</span><span class="led"></span><span class="port-name">Technical Support</span>
+        </button>
+      </div>
+      <div class="readout" id="portReadout">
+        <span class="readout-caret">&gt;</span>
+        <span class="readout-text" id="readoutText">select a port to view details</span>
       </div>
     </div>
 
     <div class="vendor-rack reveal">
-      <span class="vendor-label">VENDOR STACK</span>
-      <div class="chips">
-        <span class="chip">HPE Aruba</span>
-        <span class="chip">Fortinet</span>
-        <span class="chip">Cisco</span>
-        <span class="chip">Sophos</span>
-        <span class="chip">SonicWall</span>
-        <span class="chip">Ruckus</span>
-        <span class="chip">AirPro</span>
+      <span class="vendor-label">VENDOR STACK <span class="panel-hint">click a card</span></span>
+      <div class="vendor-grid" id="vendorGrid">
+        <button type="button" class="vendor-card" data-vendor="Aruba" data-detail="My primary platform — controller-based Wi‑Fi, CX switching, SD‑WAN and Aruba Central deployments.">
+          <span class="vendor-name">HPE Aruba</span>
+          <span class="vendor-count" data-count-for="Aruba"></span>
+          <span class="vendor-detail"></span>
+        </button>
+        <button type="button" class="vendor-card" data-vendor="Fortinet" data-detail="FortiGate firewall policy, FortiSwitch and FortiAP rollouts for perimeter security.">
+          <span class="vendor-name">Fortinet</span>
+          <span class="vendor-count" data-count-for="Fortinet"></span>
+          <span class="vendor-detail"></span>
+        </button>
+        <button type="button" class="vendor-card" data-vendor="Cisco" data-detail="Multi-vendor support — and in several projects, migrating client sites off Cisco onto Aruba or Fortinet.">
+          <span class="vendor-name">Cisco</span>
+          <span class="vendor-count" data-count-for="Cisco"></span>
+          <span class="vendor-detail"></span>
+        </button>
+        <button type="button" class="vendor-card" data-vendor="Sophos" data-detail="Sophos Central endpoint management, firewall policy and certified server protection.">
+          <span class="vendor-name">Sophos</span>
+          <span class="vendor-count" data-count-for="Sophos"></span>
+          <span class="vendor-detail"></span>
+        </button>
+        <button type="button" class="vendor-card" data-vendor="SonicWall" data-detail="Firewall deployment and perimeter security policy configuration.">
+          <span class="vendor-name">SonicWall</span>
+          <span class="vendor-count"></span>
+          <span class="vendor-detail"></span>
+        </button>
+        <button type="button" class="vendor-card" data-vendor="Ruckus" data-detail="Additional enterprise wireless platform across multi-vendor site deployments.">
+          <span class="vendor-name">Ruckus</span>
+          <span class="vendor-count"></span>
+          <span class="vendor-detail"></span>
+        </button>
+        <button type="button" class="vendor-card" data-vendor="AirPro" data-detail="Access point deployment and controller-based wireless coverage design for hospitality sites.">
+          <span class="vendor-name">AirPro</span>
+          <span class="vendor-count"></span>
+          <span class="vendor-detail"></span>
+        </button>
       </div>
     </div>
   </section>
@@ -312,54 +390,68 @@
       <p class="section-sub">Six client deployments, closed out end to end.</p>
     </div>
 
-    <div class="ticket-grid">
-      <article class="ticket reveal">
-        <div class="ticket-top"><span class="ticket-id">TCK‑001</span><span class="ticket-status">DEPLOYED</span></div>
-        <h3>VRRP Configuration &amp; Installation</h3>
-        <p class="ticket-client">Royal Continental Hotel, Dubai · 3 days</p>
-        <p>Assisted in configuring and installing VRRP for high availability and seamless failover across the hotel's network infrastructure.</p>
-        <div class="ticket-stack"><span>Aruba Controller</span><span>VRRP</span></div>
-      </article>
+    <div class="carousel reveal" id="projectsCarousel" tabindex="0" aria-roledescription="carousel" aria-label="Project deployments">
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="carouselTrack">
+          <article class="ticket carousel-slide">
+            <div class="ticket-top"><span class="ticket-id">TCK‑001</span><span class="ticket-status">DEPLOYED</span></div>
+            <span class="ticket-type">High Availability</span>
+            <h3>VRRP Configuration &amp; Installation</h3>
+            <p class="ticket-client">Royal Continental Hotel, Dubai · 3 days</p>
+            <p>Assisted in configuring and installing VRRP for high availability and seamless failover across the hotel's network infrastructure.</p>
+            <div class="ticket-stack"><span>Aruba Controller</span><span>VRRP</span></div>
+          </article>
 
-      <article class="ticket reveal">
-        <div class="ticket-top"><span class="ticket-id">TCK‑002</span><span class="ticket-status">DEPLOYED</span></div>
-        <h3>Wireless Solution Deployment</h3>
-        <p class="ticket-client">Seven Seas Hotel, Al Nahda · 2 weeks</p>
-        <p>Designed and deployed a complete wireless solution for seamless coverage across the hotel premises.</p>
-        <div class="ticket-stack"><span>AirPro APs</span><span>Wireless Controllers</span></div>
-      </article>
+          <article class="ticket carousel-slide">
+            <div class="ticket-top"><span class="ticket-id">TCK‑002</span><span class="ticket-status">DEPLOYED</span></div>
+            <span class="ticket-type">Wireless Deployment</span>
+            <h3>Wireless Solution Deployment</h3>
+            <p class="ticket-client">Seven Seas Hotel, Al Nahda · 2 weeks</p>
+            <p>Designed and deployed a complete wireless solution for seamless coverage across the hotel premises.</p>
+            <div class="ticket-stack"><span>AirPro APs</span><span>Wireless Controllers</span></div>
+          </article>
 
-      <article class="ticket reveal">
-        <div class="ticket-top"><span class="ticket-id">TCK‑003</span><span class="ticket-status">DEPLOYED</span></div>
-        <h3>Switch Replacement &amp; Network Upgrade</h3>
-        <p class="ticket-client">Danway, Dubai Investment Park · 2 weeks</p>
-        <p>Replaced Cisco switches with Fortinet switches and FortiAPs to upgrade performance and scalability.</p>
-        <div class="ticket-stack"><span>Fortinet Switches</span><span>FortiAPs</span></div>
-      </article>
+          <article class="ticket carousel-slide">
+            <div class="ticket-top"><span class="ticket-id">TCK‑003</span><span class="ticket-status">DEPLOYED</span></div>
+            <span class="ticket-type">Infrastructure Upgrade</span>
+            <h3>Switch Replacement &amp; Network Upgrade</h3>
+            <p class="ticket-client">Danway, Dubai Investment Park · 2 weeks</p>
+            <p>Replaced Cisco switches with Fortinet switches and FortiAPs to upgrade performance and scalability.</p>
+            <div class="ticket-stack"><span>Fortinet Switches</span><span>FortiAPs</span></div>
+          </article>
 
-      <article class="ticket reveal">
-        <div class="ticket-top"><span class="ticket-id">TCK‑004</span><span class="ticket-status">DEPLOYED</span></div>
-        <h3>Wireless Infrastructure Upgrade</h3>
-        <p class="ticket-client">Kempinski Central Avenue, Boulevard · 2 weeks</p>
-        <p>Replaced Cisco access points with Aruba APs on a centralized controller — seamless migration and improved guest connectivity.</p>
-        <div class="ticket-stack"><span>Aruba Controller</span><span>Aruba APs</span></div>
-      </article>
+          <article class="ticket carousel-slide">
+            <div class="ticket-top"><span class="ticket-id">TCK‑004</span><span class="ticket-status">DEPLOYED</span></div>
+            <span class="ticket-type">Wireless Deployment</span>
+            <h3>Wireless Infrastructure Upgrade</h3>
+            <p class="ticket-client">Kempinski Central Avenue, Boulevard · 2 weeks</p>
+            <p>Replaced Cisco access points with Aruba APs on a centralized controller — seamless migration and improved guest connectivity.</p>
+            <div class="ticket-stack"><span>Aruba Controller</span><span>Aruba APs</span></div>
+          </article>
 
-      <article class="ticket reveal">
-        <div class="ticket-top"><span class="ticket-id">TCK‑005</span><span class="ticket-status">DEPLOYED</span></div>
-        <h3>Network Infrastructure Replacement</h3>
-        <p class="ticket-client">Movenpick Hotel, JLT · 2 weeks</p>
-        <p>Replaced core and IDF switches for improved reliability and scalability, with minimal downtime during migration.</p>
-        <div class="ticket-stack"><span>Aruba Core Switches</span><span>Aruba Access Switches</span></div>
-      </article>
+          <article class="ticket carousel-slide">
+            <div class="ticket-top"><span class="ticket-id">TCK‑005</span><span class="ticket-status">DEPLOYED</span></div>
+            <span class="ticket-type">Infrastructure Upgrade</span>
+            <h3>Network Infrastructure Replacement</h3>
+            <p class="ticket-client">Movenpick Hotel, JLT · 2 weeks</p>
+            <p>Replaced core and IDF switches for improved reliability and scalability, with minimal downtime during migration.</p>
+            <div class="ticket-stack"><span>Aruba Core Switches</span><span>Aruba Access Switches</span></div>
+          </article>
 
-      <article class="ticket reveal">
-        <div class="ticket-top"><span class="ticket-id">TCK‑006</span><span class="ticket-status">DEPLOYED</span></div>
-        <h3>Complete Switching &amp; Wireless Upgrade</h3>
-        <p class="ticket-client">Dubai Heights Academy, Dubai · 2 weeks</p>
-        <p>Deployed stacked Aruba switches and APs on a centralized controller to support academic and admin operations.</p>
-        <div class="ticket-stack"><span>Aruba Stacked Switches</span><span>Aruba Controller</span></div>
-      </article>
+          <article class="ticket carousel-slide">
+            <div class="ticket-top"><span class="ticket-id">TCK‑006</span><span class="ticket-status">DEPLOYED</span></div>
+            <span class="ticket-type">Infrastructure Upgrade</span>
+            <h3>Complete Switching &amp; Wireless Upgrade</h3>
+            <p class="ticket-client">Dubai Heights Academy, Dubai · 2 weeks</p>
+            <p>Deployed stacked Aruba switches and APs on a centralized controller to support academic and admin operations.</p>
+            <div class="ticket-stack"><span>Aruba Stacked Switches</span><span>Aruba Controller</span></div>
+          </article>
+        </div>
+      </div>
+
+      <button type="button" class="carousel-arrow carousel-prev" id="carouselPrev" aria-label="Previous deployment">‹</button>
+      <button type="button" class="carousel-arrow carousel-next" id="carouselNext" aria-label="Next deployment">›</button>
+      <div class="carousel-dots" id="carouselDots"></div>
     </div>
   </section>
 
@@ -425,6 +517,7 @@
   <a href="#hero" class="back-top">Back to top ↑</a>
 </footer>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
